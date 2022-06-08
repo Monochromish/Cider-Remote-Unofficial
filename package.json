@@ -1,0 +1,94 @@
+{
+	"name": "cider-remote-unofficial",
+	"displayName": "Cider Remote (Unofficial)",
+	"description": "An unofficial remote for Cider player that works on VSCode.",
+	"version": "1.0.0",
+	"repository": "https://github.com/Monochromish/Cider-Remote-Unofficial.git",
+	"engines": {
+		"vscode": "^1.67.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:cider-remote.play",
+		"onCommand:cider-remote.pause",
+		"onCommand:cider-remote.toggle",
+		"onCommand:cider-remote.stop",
+		"onCommand:cider-remote.next",
+		"onCommand:cider-remote.previous"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "cider-remote",
+					"title": "Cider Remote (Unofficial)",
+					"icon": "assets/logo.svg"
+				}
+			]
+		},
+		"views": {
+			"cider-remote": [
+				{
+					"id": "cider-remote-buttons",
+					"name": "Playback buttons"
+				}
+			]
+		},
+		"viewsWelcome": [
+			{
+				"view": "cider-remote-buttons",
+				"contents": "[Toggle Play/Pause](command:cider-remote.toggle)\n[Previous](command:cider-remote.previous)\n[Next](command:cider-remote.next)\n[Stop](command:cider-remote.stop)"
+			}
+		],
+		"commands": [
+			{
+				"command": "cider-remote.play",
+				"title": "Cider Remote - Play"
+			},
+			{
+				"command": "cider-remote.pause",
+				"title": "Cider Remote - Pause"
+			},
+			{
+				"command": "cider-remote.toggle",
+				"title": "Cider Remote - Toggle Play/Pause"
+			},
+			{
+				"command": "cider-remote.stop",
+				"title": "Cider Remote - Stop"
+			},
+			{
+				"command": "cider-remote.next",
+				"title": "Cider Remote - Next"
+			},
+			{
+				"command": "cider-remote.previous",
+				"title": "Cider Remote - Previous"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "16.x",
+		"@types/vscode": "^1.67.0",
+		"@typescript-eslint/eslint-plugin": "^5.27.0",
+		"@typescript-eslint/parser": "^5.27.0",
+		"@vscode/test-electron": "^2.1.3",
+		"eslint": "^8.16.0",
+		"glob": "^8.0.3",
+		"mocha": "^10.0.0",
+		"typescript": "^4.7.2"
+	}
+}
