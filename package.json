@@ -3,7 +3,7 @@
 	"displayName": "Cider Remote (Unofficial)",
 	"description": "An unofficial remote for Cider player that works on VSCode.",
 	"icon": "Assets/Cider-Logo.png",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"repository": "https://github.com/Monochromish/Cider-Remote-Unofficial.git",
 	"publisher": "Monochromish",
 	"engines": {

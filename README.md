@@ -4,8 +4,10 @@ An unofficial remote for Cider player that works on VSCode.
 
 ## How to use
 
-Cider Remote for VSCode requires Cider player to be opened in the background.
+Cider Remote for VSCode requires Cider player to be opened in the background
+
 It uses Cider's Rest API for the playback controls and thus requires and internet connection.
+
 You can use this extension thru command pallet or by clicking on the Cider logo on the sidebar.
 
 ## Notice
